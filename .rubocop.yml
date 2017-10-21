@@ -3,3 +3,6 @@ Metrics/LineLength:
 
 Metrics/MethodLength:
   Enabled: false
+
+Style/EndOfLine:
+  EnforcedStyle: lf
