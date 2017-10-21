@@ -103,5 +103,10 @@ summands_s = \
   53503534226472524250874054075591789781264330331690'
 
 summands = summands_s.split.map(&:to_i)
+sum = 0
 
-p summands
+(0..99).each do |i|
+  sum += summands[i]
+end
+
+puts "Solution is #{sum.to_s.slice(0..9)}."
