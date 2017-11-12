@@ -12,20 +12,20 @@ class TestEuler19 < Test::Unit::TestCase
       [400, true]
     ]
     test_years.each do |test_year|
-      assert_equal(test_year[1], leap_year?(test_year[0]))
+      test_date = Date.new(test_year[0], 1, 1)
+      assert_equal(test_year[1], test_date.leap_year?)
     end
   end
 
   def test_date_initialize
-    test_date = Date.new(1901, 3, 1, 1)
+    test_date = Date.new(1901, 3, 1)
     assert_equal(1901, test_date.year)
     assert_equal(3, test_date.month)
     assert_equal(1, test_date.day)
-    assert_equal(1, test_date.dayofweek)
   end
 
   def test_next_dayofweek
-    test_date = Date.new(1901, 1, 1, 1)
+    test_date = Date.new(1901, 1, 1)
   end
 
   def test_next_day
